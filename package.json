@@ -12,7 +12,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-    "dependencies": {
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^25.5.0",
