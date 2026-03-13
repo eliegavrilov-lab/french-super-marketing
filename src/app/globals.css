@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --card: #141414;
+  --card-hover: #1a1a1a;
+  --border: #262626;
+  --text: #fafafa;
+  --text-muted: #a3a3a3;
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+  --expert: #f59e0b;
+  --viral: #ef4444;
+  --personal: #22c55e;
+  --delf: #6366f1;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.content-type-expert { border-left: 3px solid var(--expert); }
+.content-type-viral { border-left: 3px solid var(--viral); }
+.content-type-personal { border-left: 3px solid var(--personal); }
+
+.badge-expert { background: #f59e0b20; color: var(--expert); }
+.badge-viral { background: #ef444420; color: var(--viral); }
+.badge-personal { background: #22c55e20; color: var(--personal); }
+
+.platform-instagram { color: #e1306c; }
+.platform-tiktok { color: #00f2ea; }
+.platform-youtube { color: #ff0000; }
