@@ -21,7 +21,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Failed to parse AI response" }, { status: 500 });
     }
 
-    const data = JSON.parse(jsonMatch[0]);
+    // Clean control characters that Haiku sometimes includes
+    const cleaned = jsonMatch[0].replace(/[\x00-\x1F\x7F]/g, (ch) => ch === '\n' || ch === '\t' ? ch : ' ');
+    const data = JSON.parse(cleaned);
     return NextResponse.json(data);
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
